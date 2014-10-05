@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FA392697-AE25-42E4-B168-46A24E59C9CD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PickUpAppObjC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EE6B8B3464B682DF362CBCF942F560105BA591B1</key>
+		<string>https://github.com/BlueBucket7/PickUp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PickUpAppObjC.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EE6B8B3464B682DF362CBCF942F560105BA591B1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/BlueBucket7/PickUp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EE6B8B3464B682DF362CBCF942F560105BA591B1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE6B8B3464B682DF362CBCF942F560105BA591B1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PickUpAppObjC</string>
+		</dict>
+	</array>
+</dict>
+</plist>
