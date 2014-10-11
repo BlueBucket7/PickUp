@@ -14,6 +14,7 @@
 		3329EAE419DD204D0091658C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3329EAE319DD204D0091658C /* Images.xcassets */; };
 		3329EAE719DD204D0091658C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3329EAE519DD204D0091658C /* LaunchScreen.xib */; };
 		3329EAF319DD204D0091658C /* PickUpAppObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EAF219DD204D0091658C /* PickUpAppObjCTests.m */; };
+		33BEEF2219E9EC3600A55B67 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BEEF2119E9EC3600A55B67 /* SignUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		3329EAEC19DD204D0091658C /* PickUpAppObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickUpAppObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3329EAF119DD204D0091658C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3329EAF219DD204D0091658C /* PickUpAppObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickUpAppObjCTests.m; sourceTree = "<group>"; };
+		33BEEF2019E9EC3600A55B67 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		33BEEF2119E9EC3600A55B67 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				3329EAE319DD204D0091658C /* Images.xcassets */,
 				3329EAE519DD204D0091658C /* LaunchScreen.xib */,
 				3329EAD619DD204D0091658C /* Supporting Files */,
+				33BEEF2019E9EC3600A55B67 /* SignUpViewController.h */,
+				33BEEF2119E9EC3600A55B67 /* SignUpViewController.m */,
 			);
 			path = PickUpAppObjC;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				3329EADF19DD204D0091658C /* ViewController.m in Sources */,
 				3329EADC19DD204D0091658C /* AppDelegate.m in Sources */,
+				33BEEF2219E9EC3600A55B67 /* SignUpViewController.m in Sources */,
 				3329EAD919DD204D0091658C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +420,7 @@
 				3329EAF819DD204D0091658C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3329EAF919DD204D0091658C /* Build configuration list for PBXNativeTarget "PickUpAppObjCTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				3329EAFB19DD204D0091658C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

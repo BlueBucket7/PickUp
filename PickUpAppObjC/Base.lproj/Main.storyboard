@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDE-md-juY">
-                                <rect key="frame" x="88" y="72" width="84" height="21"/>
+                                <rect key="frame" x="45" y="109" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRm-rx-9ff">
-                                <rect key="frame" x="241" y="68" width="97" height="30"/>
+                                <rect key="frame" x="200" y="106" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -32,7 +32,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-Mc-s0h">
-                                <rect key="frame" x="241" y="106" width="97" height="30"/>
+                                <rect key="frame" x="200" y="144" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
@@ -40,7 +40,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-k8-Uoz">
-                                <rect key="frame" x="169" y="297" width="47" height="30"/>
+                                <rect key="frame" x="128" y="335" width="47" height="30"/>
                                 <state key="normal" title="Sign in">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-zu-mS2">
-                                <rect key="frame" x="88" y="110" width="81" height="21"/>
+                                <rect key="frame" x="47" y="148" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,12 +74,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-6" y="-597"/>
+            <point key="canvasLocation" x="-636" y="-587"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="8LC-dX-daM">
             <objects>
-                <viewController id="zFv-wB-OTG" sceneMemberID="viewController">
+                <viewController id="zFv-wB-OTG" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qwc-F6-MRi"/>
                         <viewControllerLayoutGuide type="bottom" id="a4W-ta-7zr"/>
@@ -128,45 +128,84 @@
                                 <rect key="frame" x="198" y="62" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zFv-wB-OTG" id="tpH-vo-oGI"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rob-Hi-H3e">
                                 <rect key="frame" x="198" y="290" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zFv-wB-OTG" id="bOX-34-ttn"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qbf-KY-Foq">
                                 <rect key="frame" x="198" y="247" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zFv-wB-OTG" id="T1O-Cs-DQZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQ4-dW-gXD">
                                 <rect key="frame" x="198" y="198" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zFv-wB-OTG" id="KWT-t0-TFd"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac9-gL-vLO">
                                 <rect key="frame" x="198" y="152" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCr-3H-Vws">
-                                <rect key="frame" x="198" y="107" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zFv-wB-OTG" id="73t-8L-BCV"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmM-vJ-di4">
                                 <rect key="frame" x="147" y="372" width="53" height="30"/>
                                 <state key="normal" title="Sign up">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpClicked:" destination="zFv-wB-OTG" eventType="touchDragInside" id="RoX-BD-4Jv"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCr-3H-Vws">
+                                <rect key="frame" x="198" y="107" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zFv-wB-OTG" id="UcW-wR-pwE"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LWp-02-6MG" appends="YES" id="70S-sN-RMP"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="Rob-Hi-H3e" id="Up1-Cq-mqW"/>
+                        <outlet property="txtEmail" destination="Ac9-gL-vLO" id="oLg-TQ-H9x"/>
+                        <outlet property="txtFirstname" destination="ZrC-Ng-gE6" id="Mgc-BA-OBr"/>
+                        <outlet property="txtLastName" destination="XCr-3H-Vws" id="2kF-iE-Dcu"/>
+                        <outlet property="txtPassword" destination="Qbf-KY-Foq" id="LJU-IM-jqL"/>
+                        <outlet property="txtUsername" destination="DQ4-dW-gXD" id="2L1-3m-ONi"/>
+                        <segue destination="3Kf-Sd-q61" kind="presentation" id="3jP-P4-Iiw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRP-xL-Bgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LWp-02-6MG">
+                    <connections>
+                        <action selector="backgroundTap:" destination="zFv-wB-OTG" id="fST-Qw-26s"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="59" y="130"/>
+            <point key="canvasLocation" x="-636" y="202"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EdL-2h-g3u">
@@ -192,7 +231,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeQ-aO-xI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="-597"/>
+            <point key="canvasLocation" x="212" y="-225"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4fX-Vt-UNM"/>
+    </inferredMetricsTieBreakers>
 </document>

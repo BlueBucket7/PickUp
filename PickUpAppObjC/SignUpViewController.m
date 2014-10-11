@@ -1,22 +1,22 @@
 //
-//  ViewController.m
+//  SignUpViewController.m
 //  PickUpAppObjC
 //
-//  Created by SJ on 2014-10-01.
+//  Created by SJ on 2014-10-11.
 //  Copyright (c) 2014 Wolfpack. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SignUpViewController.h"
 
-@interface ViewController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,16 +24,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginClicked:(id)sender {
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)signUpClicked:(id)sender {
+    
     NSInteger success = 0;
     @try {
         
-        if([[self.txtUsername text] isEqualToString:@""] || [[self.txtPassword text] isEqualToString:@""] ) {
+        if([[self.txtUsername text] isEqualToString:@""]
+        || [[self.txtPassword text] isEqualToString:@""]
+        || [[self.txtFirstname text] isEqualToString:@""]
+        || [[self.txtLastname text] isEqualToString:@""]
+        || [[self.txtEmail text] isEqualToString:@""]
+        || [[self.txtPassword text] isEqualToString:@""]
+        || [[self.txtConfirmPassword text] isEqualToString:@""]) {
             
-            [self alertStatus:@"Please enter Email and Password" :@"Sign in failed!" :0];
+            [self alertStatus:@"Missing fields. All fields are required." :@"Sign in failed!" :0];
+            
+        } else if([self.txtEmail.text rangeOfString:@"@"].location == NSNotFound){
+            
+            [self alertStatus:@"Invalid Email." :@"Sign in failed!" :0];
+        
+        } else if(![self.txtPassword.text isEqualToString:self.txtConfirmPassword.text]){
+            
+            [self alertStatus:@"Passwords do not match." :@"Sign in failed!" :0];
             
         } else {
-            NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[self.txtUsername text],[self.txtPassword text]];
+            NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@&firstname=%@&lastname=%@&email=%@&password=%@&confirmpassword=%@",[self.txtUsername text]
+                                                                                                                                                        ,[self.txtPassword text]
+                                                                                                                                                        ,[self.txtFirstname text]
+                                                                                                                                                        ,[self.txtLastname text]
+                                                                                                                                                        ,[self.txtEmail text]
+                                                                                                                                                        ,[self.txtPassword text]
+                                                                                                                                                        ,[self.txtConfirmPassword text]];
             NSLog(@"PostData: %@",post);
             
             NSURL *url=[NSURL URLWithString:@"http://boyuanisgay.com"];
@@ -78,22 +109,23 @@
                 } else {
                     
                     NSString *error_msg = (NSString *) jsonData[@"error_message"];
-                    [self alertStatus:error_msg :@"Sign in failed!" :0];
+                    [self alertStatus:error_msg :@"Sign in Failed!" :0];
                 }
                 
             } else {
                 //if (error) NSLog(@"Error: %@", error);
-                [self alertStatus:@"Connection Failed" :@"Sign in failed!" :0];
+                [self alertStatus:@"Connection Failed" :@"Sign in Failed!" :0];
             }
         }
     }
     @catch (NSException * e) {
         NSLog(@"Exception: %@", e);
-        [self alertStatus:@"Sign in failed." :@"Error!" :0];
+        [self alertStatus:@"Sign in Failed." :@"Error!" :0];
     }
     if (success) {
         [self performSegueWithIdentifier:@"login_success" sender:self];
     }
+
 }
 
 - (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
@@ -108,7 +140,9 @@
 }
 
 - (IBAction)backgroundTap:(id)sender {
+    
     [self.view endEditing:YES];
+    
 }
 
 - (BOOL)returnTextField:(UITextField *)textField {
@@ -116,4 +150,6 @@
     
     return YES;
 }
+
+
 @end
