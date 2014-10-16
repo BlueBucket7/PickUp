@@ -27,7 +27,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6tk-vv-r0k"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="TOU-7Q-4iF"/>
                                 </connections>
                             </textField>
@@ -35,9 +34,6 @@
                                 <rect key="frame" x="200" y="144" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="B6b-CL-b0a"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-k8-Uoz">
                                 <rect key="frame" x="128" y="335" width="47" height="30"/>
@@ -54,6 +50,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slu-6x-VhZ">
+                                <rect key="frame" x="84" y="417" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -62,8 +64,9 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="txtPassword" destination="kRm-rx-9ff" id="lGl-d8-Kbb"/>
-                        <outlet property="txtUsername" destination="kRm-rx-9ff" id="NG8-16-l7r"/>
+                        <outlet property="lblResult" destination="Slu-6x-VhZ" id="yqk-BZ-SlY"/>
+                        <outlet property="txtEmail" destination="kRm-rx-9ff" id="yfu-wN-sOc"/>
+                        <outlet property="txtPassword" destination="IO0-Mc-s0h" id="B7t-DM-1xh"/>
                         <segue destination="3Kf-Sd-q61" kind="presentation" identifier="login_success" id="4fX-Vt-UNM"/>
                     </connections>
                 </viewController>
