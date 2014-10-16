@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
-@property (weak, nonatomic) IBOutlet UITextField *txtUsername;
+@property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 
 - (IBAction)loginClicked:(id)sender;
 - (IBAction)backgroundTap:(id)sender;
