@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PickUpAppObjC/ViewController.m"
-            timestampString = "435112353.665285"
+            timestampString = "435113653.280496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "-loginClicked:"
             landmarkType = "5">
          </BreakpointContent>
