@@ -56,9 +56,13 @@
 
         //Send the request
         NSURLResponse *requestResponse;
+        NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)requestResponse;
         NSData *requestHandler = [NSURLConnection sendSynchronousRequest:request returningResponse:&requestResponse error:nil];
+        NSInteger statusCode = [HTTPResponse statusCode];
+        NSLog(@"Status:%zd",statusCode);
+        self.lblResult.text = (statusCode == 0) ? (@"Login successful") : (@"Login failed");
         NSString *requestReply = [[NSString alloc] initWithBytes:[requestHandler bytes] length:[requestHandler length] encoding:NSASCIIStringEncoding];
-        NSLog(@"requestReply: %@", requestReply);
+        NSLog(@"Server reply: %@", requestReply);
     }
     @catch (NSException * e) {
         NSLog(@"Exception: %@", e);
