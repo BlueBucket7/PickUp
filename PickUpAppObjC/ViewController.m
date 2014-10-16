@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //Facebook login
+    FBLoginView *loginView = [[FBLoginView alloc] init];
+    loginView.center = self.view.center;
+    [self.view addSubview:loginView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,7 +34,6 @@
     NSInteger success = 0;
     @try {        
         
-        //
         NSString *emailStr = self.txtEmail.text;
         NSString *passwordStr = self.txtPassword.text;
         
