@@ -11,4 +11,5 @@ Whatevers:
 
 1. Add all server supported functions
 2. Implement user input check for all forms
-3. Refactor code
+3. Create tab for sign-in and new-user
+4. Refactor code
