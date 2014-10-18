@@ -5,6 +5,7 @@ TO DO:
 Priorities:
 
 1. Allow for facebook single sign-on with cached sessions. Y
+2. Backa dn forth communication between app and FBAPI. Y
 2. Add google map API to app. Enable current location.
 
 Whatevers:
