@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
+
+@interface ViewController : UIViewController <UITextFieldDelegate, FBLoginViewDelegate>
+
+// Manual login properties
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UILabel *lblResult;
