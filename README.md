@@ -14,4 +14,4 @@ Whatevers:
 2. Implement user input check for all forms.
 3. Create tab for sign-in and new-user. Y
 4. Disable PickUp tab when user is not logged in. 
-4. Refactor code. 
+5. Create separate class for general functions. 
