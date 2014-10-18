@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330C7E6619F0DDE000AF08B1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C7E6519F0DDE000AF08B1 /* LoginViewController.m */; };
 		3329EAD919DD204D0091658C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EAD819DD204D0091658C /* main.m */; };
 		3329EADC19DD204D0091658C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EADB19DD204D0091658C /* AppDelegate.m */; };
 		3329EADF19DD204D0091658C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EADE19DD204D0091658C /* ViewController.m */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330C7E6419F0DDE000AF08B1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		330C7E6519F0DDE000AF08B1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3329EAD319DD204D0091658C /* PickUpAppObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickUpAppObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3329EAD719DD204D0091658C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3329EAD819DD204D0091658C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 		3329EACA19DD204D0091658C = {
 			isa = PBXGroup;
 			children = (
+				330C7E6419F0DDE000AF08B1 /* LoginViewController.h */,
+				330C7E6519F0DDE000AF08B1 /* LoginViewController.m */,
 				332A203F19EF88AD00F06164 /* Frameworks */,
 				3329EAD519DD204D0091658C /* PickUpAppObjC */,
 				3329EAEF19DD204D0091658C /* PickUpAppObjCTests */,
@@ -241,6 +246,7 @@
 				3329EADC19DD204D0091658C /* AppDelegate.m in Sources */,
 				33BEEF2219E9EC3600A55B67 /* SignUpViewController.m in Sources */,
 				3329EAD919DD204D0091658C /* main.m in Sources */,
+				330C7E6619F0DDE000AF08B1 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
