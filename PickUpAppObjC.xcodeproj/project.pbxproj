@@ -17,6 +17,7 @@
 		3329EAF319DD204D0091658C /* PickUpAppObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EAF219DD204D0091658C /* PickUpAppObjCTests.m */; };
 		332A204119EF88E200F06164 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332A204019EF88E200F06164 /* FacebookSDK.framework */; };
 		33BEEF2219E9EC3600A55B67 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BEEF2119E9EC3600A55B67 /* SignUpViewController.m */; };
+		33E994FC19F2D3DE0027C902 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E994FB19F2D3DE0027C902 /* GoogleMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		332A204019EF88E200F06164 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		33BEEF2019E9EC3600A55B67 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		33BEEF2119E9EC3600A55B67 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		33E994FB19F2D3DE0027C902 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E994FC19F2D3DE0027C902 /* GoogleMaps.framework in Frameworks */,
 				332A204119EF88E200F06164 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +139,7 @@
 		332A203F19EF88AD00F06164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33E994FB19F2D3DE0027C902 /* GoogleMaps.framework */,
 				332A204019EF88E200F06164 /* FacebookSDK.framework */,
 			);
 			path = Frameworks;
@@ -374,6 +378,7 @@
 					"$(inherited)",
 					/Users/SJ/Documents/FacebookSDK,
 					/Users/SJ/Documents/FacebookSDK/FBAudienceNetwork,
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = PickUpAppObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -389,6 +394,7 @@
 					"$(inherited)",
 					/Users/SJ/Documents/FacebookSDK,
 					/Users/SJ/Documents/FacebookSDK/FBAudienceNetwork,
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = PickUpAppObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -30,7 +30,7 @@
     loginView.delegate = self;
     loginView.center = self.view.center;
     //loginView.frame = CGRectMake(100, 100, 100, 44);
-    loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 180);
+    loginView.center = CGPointMake(self.view.center.x, self.view.center.y + 165);
     [self.view addSubview:loginView];
 }
 
