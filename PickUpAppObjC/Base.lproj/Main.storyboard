@@ -90,7 +90,26 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-636" y="-587"/>
+            <point key="canvasLocation" x="-648" y="-753"/>
+        </scene>
+        <!--Find PickUps-->
+        <scene sceneID="jBr-br-IhX">
+            <objects>
+                <viewController id="Vm2-d2-6Vz" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fkA-ao-cCZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ATo-2w-B3g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jbr-dN-ckn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Find PickUps" id="tFp-0P-jzF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUs-wS-ZHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-648" y="557"/>
         </scene>
         <!--New User-->
         <scene sceneID="8LC-dX-daM">
@@ -222,7 +241,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-636" y="202"/>
+            <point key="canvasLocation" x="-648" y="-98"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nsK-UW-7Qw">
@@ -237,11 +256,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9KT-PH-PRA"/>
                         <segue destination="zFv-wB-OTG" kind="relationship" relationship="viewControllers" id="b5y-wn-b4u"/>
+                        <segue destination="Vm2-d2-6Vz" kind="relationship" relationship="viewControllers" id="GjN-NZ-NYg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1e-Hi-qoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404" y="-237"/>
+            <point key="canvasLocation" x="-1592" y="-111"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EdL-2h-g3u">
@@ -267,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeQ-aO-xI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112" y="-237"/>
+            <point key="canvasLocation" x="128" y="-519"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

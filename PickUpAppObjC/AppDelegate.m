@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface AppDelegate ()
 
@@ -23,6 +24,9 @@
     // Facebook login
     [FBLoginView class];
     [FBProfilePictureView class];
+    
+    // Google Maps
+    [GMSServices provideAPIKey:@"AIzaSyCOkOnlSeN_dDdXTMXB3c60G0nyL2kUPmg"];
     
     return YES;
 }
