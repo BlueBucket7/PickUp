@@ -104,8 +104,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMe-mt-Nyp" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="321" height="432"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMe-mt-Nyp">
+                                <rect key="frame" x="0.0" y="0.0" width="306" height="405"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -113,7 +113,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Find PickUps" id="tFp-0P-jzF"/>
                     <connections>
-                        <outlet property="subMapView" destination="dMe-mt-Nyp" id="aNf-f3-fcg"/>
+                        <outlet property="subMapView" destination="dMe-mt-Nyp" id="gtt-OE-3Yh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUs-wS-ZHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
