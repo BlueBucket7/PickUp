@@ -31,6 +31,7 @@
 		33E9951419F2D5800027C902 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9950819F2D5800027C902 /* SystemConfiguration.framework */; };
 		33E9951719F2DB0D0027C902 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E9951619F2DB0D0027C902 /* MapViewController.m */; };
 		33E9951919F2DE5F0027C902 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33E9951819F2DE5F0027C902 /* GoogleMaps.bundle */; };
+		33E9951B19F347FE0027C902 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E9951A19F347FE0027C902 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		33E9951519F2DB0D0027C902 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
 		33E9951619F2DB0D0027C902 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		33E9951819F2DE5F0027C902 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		33E9951A19F347FE0027C902 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33E9951B19F347FE0027C902 /* MapKit.framework in Frameworks */,
 				33E9950919F2D5800027C902 /* AVFoundation.framework in Frameworks */,
 				33E9950A19F2D5800027C902 /* CoreData.framework in Frameworks */,
 				33E9950B19F2D5800027C902 /* CoreLocation.framework in Frameworks */,
@@ -133,17 +136,17 @@
 			isa = PBXGroup;
 			children = (
 				3329EADA19DD204D0091658C /* AppDelegate.h */,
-				33E9951519F2DB0D0027C902 /* MapViewController.h */,
-				33BEEF2019E9EC3600A55B67 /* SignUpViewController.h */,
-				3329EADD19DD204D0091658C /* ViewController.h */,
 				3329EADB19DD204D0091658C /* AppDelegate.m */,
-				33E9951619F2DB0D0027C902 /* MapViewController.m */,
-				33BEEF2119E9EC3600A55B67 /* SignUpViewController.m */,
-				3329EADE19DD204D0091658C /* ViewController.m */,
 				3329EAE319DD204D0091658C /* Images.xcassets */,
 				3329EAE519DD204D0091658C /* LaunchScreen.xib */,
 				3329EAE019DD204D0091658C /* Main.storyboard */,
+				33E9951519F2DB0D0027C902 /* MapViewController.h */,
+				33E9951619F2DB0D0027C902 /* MapViewController.m */,
+				33BEEF2019E9EC3600A55B67 /* SignUpViewController.h */,
+				33BEEF2119E9EC3600A55B67 /* SignUpViewController.m */,
 				3329EAD619DD204D0091658C /* Supporting Files */,
+				3329EADD19DD204D0091658C /* ViewController.h */,
+				3329EADE19DD204D0091658C /* ViewController.m */,
 			);
 			path = PickUpAppObjC;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 		332A203F19EF88AD00F06164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33E9951A19F347FE0027C902 /* MapKit.framework */,
 				33E9951819F2DE5F0027C902 /* GoogleMaps.bundle */,
 				33E994FD19F2D5800027C902 /* AVFoundation.framework */,
 				33E994FE19F2D5800027C902 /* CoreData.framework */,

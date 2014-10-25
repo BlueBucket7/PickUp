@@ -24,6 +24,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+//    // User input checks
+//    if([[self.txtPassword text] isEqualToString:@""]
+//       || [[self.txtEmail text] isEqualToString:@""]) {
+//        
+//        [self alertStatus:@"Missing fields. All fields are required." :@"Sign in failed!" :0];
+//        
+//    } else if([self.txtEmail.text rangeOfString:@"@"].location == NSNotFound){
+//        
+//        [self alertStatus:@"Invalid Email." :@"Sign in failed!" :0];
+//        
+//    } else if(![self.txtPassword.text isEqualToString:self.txtConfirmPassword.text]){
+//        
+//        [self alertStatus:@"Passwords do not match." :@"Sign in failed!" :0];
+//        
+//    } else {
+//        NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@&firstname=%@&lastname=%@&email=%@&password=%@&confirmpassword=%@",[self.txtUsername text]
+//                         ,[self.txtPassword text]
+//                         ,[self.txtFirstname text]
+//                         ,[self.txtLastname text]
+//                         ,[self.txtEmail text]
+//                         ,[self.txtPassword text]
+//                         ,[self.txtConfirmPassword text]];
+    
+    
     //Facebook login
     //FBLoginView *loginView = [[FBLoginView alloc] init]; //regular login
     FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"public_profile", @"email", @"user_friends"]]; //login with read permissions
@@ -41,7 +65,7 @@
 
 - (IBAction)loginClicked:(id)sender {
     NSInteger success = 0;
-    @try {        
+    @try {
         
         NSString *emailStr = self.txtEmail.text;
         NSString *passwordStr = self.txtPassword.text;
