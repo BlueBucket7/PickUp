@@ -34,93 +34,56 @@
 }
 */
 
+/*
+ TO DO:
+ - Add tap out check
+ - Move generic functions to separate class
+ */
+
 - (IBAction)signUpClicked:(id)sender {
-    
     NSInteger success = 0;
     @try {
         
-        if([[self.txtUsername text] isEqualToString:@""]
-        || [[self.txtPassword text] isEqualToString:@""]
-        || [[self.txtFirstname text] isEqualToString:@""]
-        || [[self.txtLastname text] isEqualToString:@""]
-        || [[self.txtEmail text] isEqualToString:@""]
-        || [[self.txtPassword text] isEqualToString:@""]
-        || [[self.txtConfirmPassword text] isEqualToString:@""]) {
-            
-            [self alertStatus:@"Missing fields. All fields are required." :@"Sign in failed!" :0];
-            
-        } else if([self.txtEmail.text rangeOfString:@"@"].location == NSNotFound){
-            
-            [self alertStatus:@"Invalid Email." :@"Sign in failed!" :0];
+        NSString *emailStr = self.txtEmail.text;
+        NSString *passwordStr = self.txtPassword.text;
+        NSString *userNameStr = self.txtUsername.text;
         
-        } else if(![self.txtPassword.text isEqualToString:self.txtConfirmPassword.text]){
-            
-            [self alertStatus:@"Passwords do not match." :@"Sign in failed!" :0];
-            
-        } else {
-            NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@&firstname=%@&lastname=%@&email=%@&password=%@&confirmpassword=%@",[self.txtUsername text]
-                                                                                                                                                        ,[self.txtPassword text]
-                                                                                                                                                        ,[self.txtFirstname text]
-                                                                                                                                                        ,[self.txtLastname text]
-                                                                                                                                                        ,[self.txtEmail text]
-                                                                                                                                                        ,[self.txtPassword text]
-                                                                                                                                                        ,[self.txtConfirmPassword text]];
-            NSLog(@"PostData: %@",post);
-            
-            NSURL *url=[NSURL URLWithString:@"http://boyuanisgay.com"];
-            
-            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-            
-            NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
-            
-            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-            [request setURL:url];
-            [request setHTTPMethod:@"POST"];
-            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-            [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-            [request setHTTPBody:postData];
-            
-            //[NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:[url host]];
-            
-            NSError *error = [[NSError alloc] init];
-            NSHTTPURLResponse *response = nil;
-            NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-            
-            NSLog(@"Response code: %ld", (long)[response statusCode]);
-            
-            if ([response statusCode] >= 200 && [response statusCode] < 300)
-            {
-                NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
-                NSLog(@"Response ==> %@", responseData);
-                
-                NSError *error = nil;
-                NSDictionary *jsonData = [NSJSONSerialization
-                                          JSONObjectWithData:urlData
-                                          options:NSJSONReadingMutableContainers
-                                          error:&error];
-                
-                success = [jsonData[@"success"] integerValue];
-                NSLog(@"Success: %ld",(long)success);
-                
-                if(success == 1)
-                {
-                    NSLog(@"Login SUCCESS");
-                } else {
-                    
-                    NSString *error_msg = (NSString *) jsonData[@"error_message"];
-                    [self alertStatus:error_msg :@"Sign in Failed!" :0];
-                }
-                
-            } else {
-                //if (error) NSLog(@"Error: %@", error);
-                [self alertStatus:@"Connection Failed" :@"Sign in Failed!" :0];
-            }
-        }
+        NSMutableDictionary *user = [[NSMutableDictionary alloc] init];
+        [user setObject:emailStr forKey:@"email"];
+        [user setObject:passwordStr forKey:@"password"];
+        [user setObject:userNameStr forKey:@"displayName"];
+        NSMutableDictionary *newUser = [[NSMutableDictionary alloc] init];
+        [newUser setObject:user forKey:@"newUser"];
+        
+        // create a JSONObject from the NSDictionary and an error object
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:newUser options:NSJSONWritingPrettyPrinted error:&error];
+        
+        //Create a request
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:[NSURL URLWithString:@"http://pickupapp.herokuapp.com/users/signup"]];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:jsonData];
+        
+        //TO BE REMOVED. DEBUGGING.
+        //Print out the data contents
+        NSString *jsonSummary = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"jsonSummary:%@", jsonSummary);
+        
+        //Send the request
+        NSURLResponse *requestResponse;
+        NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)requestResponse;
+        NSData *requestHandler = [NSURLConnection sendSynchronousRequest:request returningResponse:&requestResponse error:nil];
+        NSInteger statusCode = [HTTPResponse statusCode];
+        NSLog(@"Status:%zd",statusCode);
+        //self.lblResult.text = (statusCode == 0) ? (@"Login successful") : (@"Login failed");
+        NSString *requestReply = [[NSString alloc] initWithBytes:[requestHandler bytes] length:[requestHandler length] encoding:NSASCIIStringEncoding];
+        NSLog(@"Server reply: %@", requestReply);
     }
     @catch (NSException * e) {
         NSLog(@"Exception: %@", e);
-        [self alertStatus:@"Sign in Failed." :@"Error!" :0];
+        [self alertStatus:@"Sign in failed." :@"Error!" :0];
     }
     if (success) {
         [self performSegueWithIdentifier:@"login_success" sender:self];
