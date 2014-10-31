@@ -106,6 +106,56 @@
     
     [self.view endEditing:YES];
     
+    Boolean result = [self doesExist:self.txtEmail.text];
+    
+}
+
+-(Boolean)doesExist:(NSString*) userName {
+    
+    NSInteger success = 0;
+    @try {
+        
+        NSString *emailStr = self.txtEmail.text;
+        
+        NSMutableDictionary *email = [[NSMutableDictionary alloc] init];
+        [email setObject:emailStr forKey:@"email"];
+        NSMutableDictionary *doesExist = [[NSMutableDictionary alloc] init];
+        [doesExist setObject:email forKey:@"doesExist"];
+        
+        // create a JSONObject from the NSDictionary and an error object
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:doesExist options:NSJSONWritingPrettyPrinted error:&error];
+        
+        //Create a request
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:[NSURL URLWithString:@"http://pickupapp.herokuapp.com/users/exist"]];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:jsonData];
+        
+        //TO BE REMOVED. DEBUGGING.
+        //Print out the data contents
+        NSString *jsonSummary = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"jsonSummary:%@", jsonSummary);
+        
+        //Send the request
+        NSURLResponse *requestResponse;
+        NSHTTPURLResponse *HTTPResponse = (NSHTTPURLResponse *)requestResponse;
+        NSData *requestHandler = [NSURLConnection sendSynchronousRequest:request returningResponse:&requestResponse error:nil];
+        NSInteger statusCode = [HTTPResponse statusCode];
+        NSLog(@"Status:%zd",statusCode);
+        //self.lblResult.text = (statusCode == 0) ? (@"Login successful") : (@"Login failed");
+        NSString *requestReply = [[NSString alloc] initWithBytes:[requestHandler bytes] length:[requestHandler length] encoding:NSASCIIStringEncoding];
+        NSLog(@"Server reply: %@", requestReply);
+    }
+    @catch (NSException * e) {
+        NSLog(@"Exception: %@", e);
+        [self alertStatus:@"Sign in failed." :@"Error!" :0];
+    }
+    if (success) {
+        [self performSegueWithIdentifier:@"login_success" sender:self];
+    }
+    
 }
 
 - (BOOL)returnTextField:(UITextField *)textField {
