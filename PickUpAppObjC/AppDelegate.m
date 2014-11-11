@@ -26,7 +26,7 @@
     [FBProfilePictureView class];
     
     // Google Maps
-    [GMSServices provideAPIKey:@"AIzaSyCOkOnlSeN_dDdXTMXB3c60G0nyL2kUPmg"];
+    [GMSServices provideAPIKey:@"AIzaSyDBWWYz0YFkKNz6JE09PlV3wWdAayZVq50"];
     
     return YES;
 }

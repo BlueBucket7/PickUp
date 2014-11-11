@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330B485D1A0B31BF006F1EDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 330B485C1A0B31BF006F1EDF /* InfoPlist.strings */; };
 		3329EAD919DD204D0091658C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EAD819DD204D0091658C /* main.m */; };
 		3329EADC19DD204D0091658C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EADB19DD204D0091658C /* AppDelegate.m */; };
 		3329EADF19DD204D0091658C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3329EADE19DD204D0091658C /* ViewController.m */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330B485C1A0B31BF006F1EDF /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		3329EAD319DD204D0091658C /* PickUpAppObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickUpAppObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3329EAD719DD204D0091658C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3329EAD819DD204D0091658C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		3329EACA19DD204D0091658C = {
 			isa = PBXGroup;
 			children = (
+				330B485C1A0B31BF006F1EDF /* InfoPlist.strings */,
 				3329EAD519DD204D0091658C /* PickUpAppObjC */,
 				332A203F19EF88AD00F06164 /* Frameworks */,
 				3329EAD419DD204D0091658C /* Products */,
@@ -285,6 +288,7 @@
 				3329EAE719DD204D0091658C /* LaunchScreen.xib in Resources */,
 				3329EAE419DD204D0091658C /* Images.xcassets in Resources */,
 				33E9951919F2DE5F0027C902 /* GoogleMaps.bundle in Resources */,
+				330B485D1A0B31BF006F1EDF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +443,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = PickUpAppObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -455,6 +460,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = PickUpAppObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
